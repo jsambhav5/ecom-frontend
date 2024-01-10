@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const User = (props) => {
+const Users = (props) => {
 	const users = props.users
-	return (
+
+	return (<div>
 		<table>
 			<thead>
 				<tr>
@@ -21,7 +22,9 @@ const User = (props) => {
 				})}
 			</tbody>
 		</table>
+		No. of Admins : {props.calculateAdmin()}
+	</div>
 	)
 }
 
-export default User
+export default Users

@@ -1,9 +1,18 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useCallback, useLayoutEffect, useState } from 'react'
 import { getAllUsers } from '../../APIs/userAPI'
-import User from '../../Components/Users/Users'
+import Users from '../../Components/Users/Users'
 
 const Home = () => {
 	const [users, setUsers] = useState([])
+
+	const calculateAdmin = useCallback(() => {
+		let adminCount = 0;
+		users.forEach(user => {
+			if (user.role === "admin")
+				adminCount++;
+		})
+		return adminCount;
+	})
 
 	useLayoutEffect(() => {
 		const fetchData = async () => {
@@ -16,7 +25,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<User users={users} />
+			<Users users={users} calculateAdmin={calculateAdmin} />
 		</div>
 	)
 }
