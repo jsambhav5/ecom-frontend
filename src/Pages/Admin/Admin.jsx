@@ -12,7 +12,7 @@ const Home = () => {
 				adminCount++;
 		})
 		return adminCount;
-	})
+	}, [users])
 
 	useLayoutEffect(() => {
 		const fetchData = async () => {
