@@ -86,6 +86,15 @@ function App() {
 
 					<Route
 						exact
+						path="/customHook"
+						element={
+							<GuestRoute>
+								<CustomHook />
+							</GuestRoute>
+						} />
+
+					<Route
+						exact
 						path="/useContext"
 						element={
 							<GuestRoute>
@@ -102,16 +111,8 @@ function App() {
 							</GuestRoute>
 						} />
 
-					<Route
-						exact
-						path="/customHook"
-						element={
-							<GuestRoute>
-								<CustomHook />
-							</GuestRoute>
-						} />
-
 					<Route exact path="/profile" element={<Profile />} />
+
 					<Route exact path="/cart" element={<Cart />} />
 				</Routes>
 			</Router>
