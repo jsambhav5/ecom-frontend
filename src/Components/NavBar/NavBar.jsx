@@ -18,9 +18,9 @@ const NavBar = () => {
 		*/}
 
 			<Link to={"/customHook"}><button>Custom Hook</button></Link>
+			<Link to={"/signup"}><button>SignUp</button></Link>
 
 			{/* 
-				<Link to={"/signup"}><button>SignUp</button></Link>
 				<Link to={"/profile"}><button>Profile</button></Link>
 				<Link to={"/cart"}><button>Cart</button></Link> 
 			*/}
