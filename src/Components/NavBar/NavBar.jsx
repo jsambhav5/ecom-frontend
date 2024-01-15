@@ -27,7 +27,11 @@ const NavBar = () => {
 
 			<button onClick={() => {
 				store.dispatch({ type: "logout" });
-				store.dispatch({ type: "setRole", payload: { role: "" } })
+				store.dispatch({ type: "setRole", payload: { role: "", id: "" } })
+
+				localStorage.removeItem("isLoggedIn")
+				localStorage.removeItem("role")
+				localStorage.removeItem("id")
 			}}>Logout</button>
 			<hr />
 		</div>

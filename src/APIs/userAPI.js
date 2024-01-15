@@ -10,6 +10,9 @@ const userAPI = axios.create({
 });
 
 export const signUp = async (data) => userAPI.post("/api/user", data);
-export const getAllUsers = async (data) => userAPI.get("/api/users");
+export const getAllUsers = async () => userAPI.get("/api/users");
+export const registerUser = async (data) => userAPI.post("/api/users", data);
+export const deleteUser = async (email) => userAPI.delete(`/api/users?email=${email}`);
+export const updateUser = async (data) => userAPI.put("/api/users", data);
 
 export default userAPI;

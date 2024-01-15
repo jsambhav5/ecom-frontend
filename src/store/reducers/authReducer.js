@@ -1,5 +1,5 @@
 let defaultAuth = {
-	isLoggedIn: false
+	isLoggedIn: localStorage.getItem("isLoggedIn")
 };
 
 export default function authReducer(state = defaultAuth, action) {

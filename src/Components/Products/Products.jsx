@@ -19,10 +19,16 @@ const User = (props) => {
 						<td>{product.name}</td>
 						<td>{product.price}</td>
 						<td>{product.in_stock}</td>
+
+						<td><button
+							disabled={product["user_id"] != props.userId}
+							onClick={() => { props.deleteButton(product.id) }}
+						>Delete</button></td>
+
 					</tr>;
 				})}
 			</tbody>
-		</table>
+		</table >
 	)
 }
 
