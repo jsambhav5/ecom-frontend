@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { signUp } from "../../APIs/userAPI";
 import login from '../../store/actions/loginAction';
 import { useDispatch } from "react-redux";
+import "./SignUp.scss"
 
 const SignUp = () => {
 	const [name, setName] = useState("");
@@ -22,7 +23,7 @@ const SignUp = () => {
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit} style={{ "display": "flex", flexDirection: "column", margin: "50px 500px 20px 500px", width: "500px" }}>
+			<form onSubmit={handleSubmit} className='SignupForm'>
 				<input
 					type="text"
 					value={name}

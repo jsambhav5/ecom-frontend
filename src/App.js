@@ -41,24 +41,6 @@ function App() {
 
 					<Route
 						exact
-						path="/login"
-						element={
-							<GuestRoute>
-								<Login />
-							</GuestRoute>
-						} />
-
-					<Route
-						exact
-						path="/signup"
-						element={
-							<GuestRoute>
-								<SignUp />
-							</GuestRoute>
-						} />
-
-					<Route
-						exact
 						path="/useMemo"
 						element={
 							<GuestRoute>
@@ -114,6 +96,24 @@ function App() {
 					<Route exact path="/profile" element={<Profile />} />
 
 					<Route exact path="/cart" element={<Cart />} />
+
+					<Route
+						exact
+						path="/login"
+						element={
+							<GuestRoute>
+								<Login />
+							</GuestRoute>
+						} />
+
+					<Route
+						exact
+						path="/signup"
+						element={
+							<GuestRoute>
+								<SignUp />
+							</GuestRoute>
+						} />
 				</Routes>
 			</Router>
 		</div>

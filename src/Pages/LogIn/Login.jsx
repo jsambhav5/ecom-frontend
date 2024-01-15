@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import login from '../../store/actions/loginAction';
 import { useDispatch } from "react-redux";
+import "./Login.scss"
 
 const Login = () => {
 	const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const Login = () => {
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit} style={{ "display": "flex", flexDirection: "column", margin: "50px 500px 20px 500px", width: "500px" }}>
+			<form onSubmit={handleSubmit} className='LoginForm'>
 
 				<input
 					type="email"

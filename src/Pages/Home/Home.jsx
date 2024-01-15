@@ -3,6 +3,7 @@ import { getAllProducts } from '../../APIs/productAPI'
 import Products from '../../Components/Products/Products'
 import { createProduct, deleteProduct, updateProduct } from '../../APIs/productAPI'
 import { useSelector } from "react-redux";
+import "./Home.scss"
 
 const Home = () => {
 	const [products, setProducts] = useState([])
@@ -30,7 +31,7 @@ const Home = () => {
 		<div>
 			<Products products={products} userId={userId} deleteButton={(id) => { deleteProduct(id) }} />
 
-			<form onSubmit={handleSubmit} style={{ "display": "flex", flexDirection: "column", margin: "50px 500px 20px 500px", width: "500px" }}>
+			<form onSubmit={handleSubmit} className='UpdateForm'>
 
 				<input
 					type="number"
